@@ -1,3 +1,176 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap');
+
+body {
+	background-color: hsl(210, 46%, 95%);
+
+	height: 100vh;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+h1 {
+	font-family: 'Manrope', sans-serif;
+	font-size: 1.3rem;
+	font-weight: 700;
+	color: hsl(217, 19%, 35%);
+	line-height: 1.35;
+}
+
+p {
+	font-family: 'Manrope', sans-serif;
+	font-size: 0.84rem;
+	font-weight: 500;
+	color: hsl(214, 17%, 51%);
+}
+
+.main-wrapper {
+	display: flex;
+}
+
+.background-image {
+	background-image: url('../../public/drawers.jpg');
+	height: 285px;
+	width: 285px;
+	background-size: cover;
+	background-position: center left;
+	border-radius: 10px 0 0 10px;
+}
+
+.text-wrapper {
+	display: flex;
+	flex-direction: column;
+	/* align-items: center; */
+	justify-content: space-between;
+	background-color: white;
+	border-radius: 0 10px 10px 0;
+
+	padding: 2rem 2.5rem 2rem 2.5rem;
+
+	width: 450px;
+}
+
+.bottom-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.avatar-wrapper {
+	display: flex;
+	align-items: center;
+}
+
+.avatar-image {
+	height: 40px;
+	border-radius: 99px;
+	margin-right: 1rem;
+}
+
+.name-text {
+	color: hsl(217, 19%, 35%);
+	font-weight: 700;
+}
+
+.popover-wrapper {
+	position: relative;
+}
+
+.share-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 99px;
+	background-color: hsl(210, 46%, 95%);
+	width: 30px;
+	height: 30px;
+}
+
+.share-button:active {
+	background-color: hsl(214, 17%, 51%);
+}
+
+.share-button:active .arrow-svg > path {
+	fill: white;
+}
+
+.popover-content {
+	position: absolute;
+	bottom: 195%;
+	right: -350%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	background-color: hsl(217, 19%, 35%);
+	padding: 1.1rem;
+	width: 250px;
+	border-radius: 10px;
+}
+
+.popover-content > .share-button {
+	visibility: hidden;
+}
+
+.arrow {
+	position: absolute;
+	width: 19px;
+	height: 19px;
+	transform: rotate(45deg);
+	background-color: hsl(217, 19%, 35%);
+	top: 80%;
+	right: 45%;
+}
+
+@media (max-width: 375px) {
+	.main-wrapper {
+		flex-direction: column;
+	}
+
+	.background-image {
+		background-image: url('../../public/drawers.jpg');
+		height: 200px;
+		width: 325px;
+		background-size: fill;
+		background-position: center 25%;
+		border-radius: 10px 10px 0 0;
+	}
+
+	.text-wrapper {
+		width: 325px;
+		height: 310px;
+		border-radius: 0 0 10px 10px;
+		padding: 2rem 2rem 2rem 2.5rem;
+	}
+
+	h1 {
+		line-height: 1.3;
+		font-size: 1rem;
+	}
+
+	.arrow {
+		visibility: hidden;
+	}
+
+	.popover-content {
+		position: absolute;
+		bottom: -120%;
+		right: -110%;
+		display: flex;
+		gap: 20px;
+		align-items: center;
+		background-color: hsl(217, 19%, 35%);
+		padding: 1.1rem;
+		width: 325px;
+		height: 70px;
+		border-radius: 0 0 10px 10px;
+	}
+
+	.popover-content > .share-button {
+		visibility: visible;
+	}
+}
