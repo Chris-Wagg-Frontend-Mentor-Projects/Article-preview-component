@@ -33,7 +33,8 @@ export default function Home() {
 						<Popover className='popover-wrapper'>
 							<Popover.Button
 								id='button'
-								className='share-button'>
+								className='share-button'
+								aria-label='Share button'>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
 									width='15'
